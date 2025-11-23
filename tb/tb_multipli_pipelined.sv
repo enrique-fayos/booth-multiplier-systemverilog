@@ -5,7 +5,7 @@
 // Integración Sistemas Digitales
 // Curso 2025-26
 // --------------------------------------------------------------------
-// Nombre del archivo: tb_mutipli_pipelined.sv
+// Nombre del archivo: tb_multipli_pipelined.sv
 //
 // Descripción: Banco de pruebas para el multiplicador pipelined
 //              'multipli_pipelined'. Utiliza una interface SystemVerilog
@@ -159,7 +159,7 @@ program estimulos #( parameter int N = 8)(bus_mult.tb bus);
       almacenar_salidas_queues();
       check_queues();
     join_none
-    // TB goldem model arithmetico
+    // TB golden model arithmetico
     @(bus.sd);
     bus.sd.A <= '0; bus.sd.B <= '0; bus.sd.START <= 1'b0;
     cov = new();
@@ -188,7 +188,7 @@ program estimulos #( parameter int N = 8)(bus_mult.tb bus);
   // ------------------------------------------------------------- END ZONA ESTIMULOS
 endprogram
 
-module tb_mutipli_pipelined();
+module tb_multipli_pipelined();
   // Parametro
   localparam int N = 8; //EL ALGORITMO SOLO FUNCIONA CON PARAES N=2,4,6,8...
   // Reloj y Reset
